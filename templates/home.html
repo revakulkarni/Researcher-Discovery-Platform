@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en" style="width: 100%;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>RDP</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&amp;display=swap">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <style>
+        .newsletter-subscribe {
+            color: #313437;
+            background-color: #fff;
+            padding: 50px 0;
+          }
+          
+          .newsletter-subscribe p {
+            color: #7d8285;
+            line-height: 1.5;
+          }
+          
+          .newsletter-subscribe h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 25px;
+            line-height: 1.5;
+            padding-top: 0;
+            margin-top: 0;
+            color: inherit;
+          }
+          
+          .newsletter-subscribe .intro {
+            font-size: 16px;
+            max-width: 500px;
+            margin: 0 auto 25px;
+          }
+          
+          .newsletter-subscribe .intro p {
+            margin-bottom: 35px;
+          }
+          
+          .newsletter-subscribe form {
+            justify-content: center;
+          }
+          
+          .newsletter-subscribe form .form-control {
+            background: #eff1f4;
+            border: none;
+            border-radius: 3px;
+            box-shadow: none;
+            outline: none;
+            color: inherit;
+            text-indent: 9px;
+            height: 45px;
+            margin-right: 10px;
+            min-width: 250px;
+          }
+          
+          .newsletter-subscribe form .btn {
+            padding: 16px 32px;
+            border: none;
+            background: none;
+            box-shadow: none;
+            text-shadow: none;
+            opacity: 0.9;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 13px;
+            letter-spacing: 0.4px;
+            line-height: 1;
+          }
+          
+          .newsletter-subscribe form .btn:hover {
+            opacity: 1;
+          }
+          
+          .newsletter-subscribe form .btn:active {
+            transform: translateY(1px);
+          }
+          
+          .newsletter-subscribe form .btn-primary {
+            background-color: #055ada !important;
+            color: #fff;
+            outline: none !important;
+          }
+          
+          @media (min-width: 576px) {
+            .newsletter-subscribe form .form-control {
+              display: inline-block;
+              width: auto;
+              vertical-align: middle;
+            }
+          }
+          
+          .navigation-clean-button {
+            background: #fff;
+            padding-top: .75rem;
+            padding-bottom: .75rem;
+            color: #333;
+            border-radius: 0;
+            box-shadow: none;
+            border: none;
+            margin-bottom: 0;
+          }
+          
+          @media (min-width:768px) {
+            .navigation-clean-button {
+              padding-top: 1rem;
+              padding-bottom: 1rem;
+            }
+          }
+          
+          .navigation-clean-button .navbar-brand {
+            font-weight: bold;
+            color: inherit;
+          }
+          
+          .navigation-clean-button .navbar-brand:hover {
+            color: #222;
+          }
+          
+          .navigation-clean-button .navbar-toggler {
+            border-color: #ddd;
+          }
+          
+          .navigation-clean-button .navbar-toggler:hover, .navigation-clean-button .navbar-toggler:focus {
+            background: none;
+          }
+          
+          .navigation-clean-button .navbar-toggler {
+            color: #888;
+          }
+          
+          .navigation-clean-button .navbar-nav a.active, .navigation-clean-button .navbar-nav > .show > a {
+            background: none;
+            box-shadow: none;
+          }
+          
+          .navigation-clean-button.navbar-light .navbar-nav a.active, .navigation-clean-button.navbar-light .navbar-nav a.active:focus, .navigation-clean-button.navbar-light .navbar-nav a.active:hover {
+            color: #8f8f8f;
+            box-shadow: none;
+            background: none;
+            pointer-events: none;
+          }
+          
+          .navigation-clean-button.navbar .navbar-nav .nav-link {
+            padding-left: 18px;
+            padding-right: 18px;
+          }
+          
+          .navigation-clean-button.navbar-light .navbar-nav .nav-link {
+            color: #465765;
+          }
+          
+          .navigation-clean-button.navbar-light .navbar-nav .nav-link:focus, .navigation-clean-button.navbar-light .navbar-nav .nav-link:hover {
+            color: #37434d !important;
+            background-color: transparent;
+          }
+          
+          .navigation-clean-button .navbar-nav > li > .dropdown-menu {
+            margin-top: -5px;
+            box-shadow: 0 4px 8px rgba(0,0,0,.1);
+            background-color: #fff;
+            border-radius: 2px;
+          }
+          
+          .navigation-clean-button .dropdown-menu .dropdown-item:focus, .navigation-clean-button .dropdown-menu .dropdown-item {
+            line-height: 2;
+            font-size: 14px;
+            color: #37434d;
+          }
+          
+          .navigation-clean-button .dropdown-menu .dropdown-item:focus, .navigation-clean-button .dropdown-menu .dropdown-item:hover {
+            background: #eee;
+            color: inherit;
+          }
+          
+          .navigation-clean-button .actions .login {
+            margin-right: 1rem;
+            text-decoration: none;
+            color: #465765;
+          }
+          
+          .navigation-clean-button .navbar-text .action-button, .navigation-clean-button .navbar-text .action-button:active, .navigation-clean-button .navbar-text .action-button:hover {
+            background: #56c6c6;
+            border-radius: 20px;
+            font-size: inherit;
+            color: #fff;
+            box-shadow: none;
+            border: none;
+            text-shadow: none;
+            padding: .5rem 1rem;
+            transition: background-color 0.25s;
+            font-size: inherit;
+          }
+          
+          .navigation-clean-button .navbar-text .action-button:hover {
+            background: #66d7d7;
+          }
+          
+          .footer-basic {
+            padding: 40px 0;
+            background-color: #ffffff;
+            color: #4b4c4d;
+          }
+          
+          .footer-basic ul {
+            padding: 0;
+            list-style: none;
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 0;
+          }
+          
+          .footer-basic li {
+            padding: 0 10px;
+          }
+          
+          .footer-basic ul a {
+            color: inherit;
+            text-decoration: none;
+            opacity: 0.8;
+          }
+          
+          .footer-basic ul a:hover {
+            opacity: 1;
+          }
+          
+          .footer-basic .social {
+            text-align: center;
+            padding-bottom: 25px;
+          }
+          
+          .footer-basic .social > a {
+            font-size: 24px;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            display: inline-block;
+            text-align: center;
+            border-radius: 50%;
+            border: 1px solid #ccc;
+            margin: 0 8px;
+            color: inherit;
+            opacity: 0.75;
+          }
+          
+          .footer-basic .social > a:hover {
+            opacity: 0.9;
+          }
+          
+          .footer-basic .copyright {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 13px;
+            color: #aaa;
+            margin-bottom: 0;
+          }
+          
+          .profileblocks {
+            overflow-y: scroll;
+          }
+          
+          /* width */
+          
+          .profileblocks::-webkit-scrollbar {
+            width: 5px;
+          }
+          
+          /* Track */
+          
+          .profileblocks::-webkit-scrollbar-track {
+            background: #ffffff;
+          }
+          
+          /* Handle */
+          
+          .profileblocks::-webkit-scrollbar-thumb {
+            background: #545454;
+            border-radius: 4px;
+          }
+          
+          /* Handle on hover */
+          
+          .profileblocks::-webkit-scrollbar-thumb:hover {
+            background: #545454;
+          }
+          
+          
+    </style>
+    {% load static%}
+    <link rel="stylesheet" type="text/css href="{% static 'styles.css' %}">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg navigation-clean-button" style="background: rgb(84,84,84);color: rgb(255,255,255);">
+        <div class="container-fluid"><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav me-auto"></ul><span class="navbar-text actions"> <a class="login" href="#" style="color: rgb(255,255,255);">Log In</a></span>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid text-center" style="margin-bottom: 50px;">
+        <div class="row">
+            <div class="col-auto col-md-12"><img src="/static/img/hexapodslogo.png" width="250px" height="250px" alt="brandLogo">
+                <h1 style="font-size: 25px;font-family: 'Source Sans Pro', sans-serif;">Research Development Platform<br></h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <section class="newsletter-subscribe" style="padding: 49px 0px;padding-top: 50px;padding-bottom: 50px;">
+                    <div class="container-fluid" style="height: 44px;">
+                        <form class="d-xl-flex justify-content-xl-center" method="post" style="font-family: 'Open Sans', sans-serif;height: auto;">
+                            {% csrf_token %}
+                            <div class="mb-3" style="background: #ffffff;margin: 0;margin-bottom: 0px !important;border-top: 1px solid #ade3ee;border-bottom: 1px solid #ade3ee;border-left: 1px solid #ade3ee;width: 500px;"><input class="form-control" type="text" placeholder="Type to search" name="search" style="background: rgb(255,255,255);color: #585858;font-size: 20px;width: 100%;height: 100%;"></div>
+                            <div class="mb-3" style="margin: 0;margin-bottom: 0px !important;border-radius: 0;border-top: 1px solid #ade3ee ;border-right: 1px solid #ade3ee ;border-bottom: 1px solid #ade3ee ;"><button class="btn" type="submit" style="background: rgb(223,251,255);color: #585858;font-size: 20px;width: 200px;">SEARCH</button></div>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="row justify-content-center" style="width: auto;">
+            <div class="col-md-12" style="height: auto;width: Auto;">
+                <section class="text-center" style="width: 100%;">
+                    <h1 style="font-family: 'Libre Baskerville', serif;font-size: 30px;width: auto;height: auto;margin-bottom: 15px;">OUR OBJECTIVES<br></h1>
+                    <ul class="text-start" style="font-family: 'Source Sans Pro', sans-serif;font-size: 25px;">
+                        <li>Quickly and conveniently provide information about expert to peers, pros-pective collaborators, funding agencies policy makers and research scholar in the country.<br></li>
+                        <li>Identify peer reviewers for articles and research proposal.<br></li>
+                        <li>Discover prospective collaborators for on-going research projects.<br></li>
+                        <li>Establish communication directly with the experts who possess the expertise needed by users.<br></li>
+                        <li>To create information exchanges and networking opportunities among scientists.<br></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </div>
+    <footer class="text-center footer-basic" style="background: #545454;color: rgb(255,255,255);padding: 0px;padding-top: 5px;padding-bottom: 10px;"><img src="/static/img/hexapodOL.png" style="width: 75px;">
+        <h1 style="font-family: 'Libre Baskerville', serif;font-size: 20px;">Hexapods</h1>
+        <div class="social" style="font-size: 27px;line-height: auto;height: auto;padding: 0;"><a href="#" style="background: #00d4ff;border-bottom-style: none;border-bottom-color: rgb(255,255,255);"><i class="icon ion-social-linkedin" style="color: rgb(255,255,255);background: rgba(218,139,139,0);"></i></a><a href="#" style="background: #00d4ff;border-bottom-style: none;"><i class="fab fa-facebook-f"></i></a><a href="#" style="background: #00d4ff;border-bottom-style: none;"><i class="icon ion-social-twitter"></i></a><a href="#" style="background: #00d4ff;border-bottom-style: none;"><i class="icon ion-social-facebook"></i></a></div>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="#">About us</a></li>
+            <li class="list-inline-item"><a href="#">Terms of Service</a></li>
+            <li class="list-inline-item"><a href="#">Resources</a></li>
+            <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+        </ul>
+        <p class="copyright">Hexapods © 2022</p>
+    </footer>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
